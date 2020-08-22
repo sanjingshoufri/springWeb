@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>tn</groupId>
+  <artifactId>test.spring-boot.demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>test.spring-boot.demo</name>
+  <url>http://maven.apache.org</url>
+
+  <!--spring-boot父节点依赖，引入这个之后相关的引入就不需要添加version配置，
+    spring-boot会自动选择最合适的版本-->
+  <parent>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-parent</artifactId>
+     <version>1.5.2.RELEASE</version>
+  </parent>
+
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+	 <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <!--
+        <version></version>
+        由于在上面指定了parent（spring boot） 所以它会选择最适合的版本
+        -->
+	</dependency>
+    <dependency>
+           <groupId>junit</groupId>
+           <artifactId>junit</artifactId>
+           <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin </artifactId>
+        </plugin>
+    </plugins>
+  </build>
+</project>
