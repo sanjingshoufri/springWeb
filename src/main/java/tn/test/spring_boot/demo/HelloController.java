@@ -8,7 +8,6 @@ import com.alibaba.fastjson.*;
 public class HelloController {
 	@RequestMapping("/notice")
 	public String noticeList(){
-		// notice list from db-table
 		
 		
 		// array turn into json format
