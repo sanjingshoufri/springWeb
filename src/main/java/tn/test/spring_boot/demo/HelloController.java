@@ -8,10 +8,9 @@ import com.alibaba.fastjson.*;
 public class HelloController {
 	@RequestMapping("/notice")
 	public String noticeList(){
-		
-		
 		// array turn into json format
         String[] names = {"taonian", "xiaoyu", "chu"};
+        
         
         return "hello";
 	}
